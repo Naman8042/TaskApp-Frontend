@@ -15,7 +15,7 @@ const Edittask = () => {
   useEffect(() => {
     if (id) {
       const fetchTask = async () => {
-        const response = await axios.get(`http://localhost:4000/tasks/${id}`);
+        const response = await axios.get(`https://task-2ngl.onrender.com/tasks/${id}`);
         const task = response.data;
         setTitle(task.title);
         setDescription(task.description);
@@ -32,10 +32,10 @@ const Edittask = () => {
 
     if (id) {
       toast.success("Updated Successfully")
-      await axios.put(`http://localhost:4000/tasks/${id}`, task);
+      await axios.put(`https://task-2ngl.onrender.com/tasks/${id}`, task);
       navigate("/")
     } else {
-      await axios.post('http://localhost:4000/tasks', task);
+      await axios.post('https://task-2ngl.onrender.com/tasks', task);
       toast.success("Created Successfully")
       navigate("/")
     }

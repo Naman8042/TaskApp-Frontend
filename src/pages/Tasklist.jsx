@@ -9,7 +9,7 @@ const Tasklist = () => {
   
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await axios.get('http://localhost:4000/tasks');
+      const response = await axios.get('https://task-2ngl.onrender.com/tasks');
       setTasks(response.data);
       console.log(response.data)
     };
@@ -17,7 +17,7 @@ const Tasklist = () => {
   }, []);
 
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:4000/tasks/${id}`);
+    await axios.delete(`https://task-2ngl.onrender.com/tasks/${id}`);
     setTasks(tasks.filter(task => task._id !== id));
   };
   
