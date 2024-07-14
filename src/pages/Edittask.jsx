@@ -48,27 +48,27 @@ const Edittask = () => {
       <form onSubmit={handleSubmit} className='flex justify-center items-center flex-col h-screen'>
       <h1 className='text-center text-3xl py-[2%] '>{id ? 'Edit Task' : 'Create Task'}</h1>
         <div className='flex gap-3 w-full justify-center my-[1%] items-center'>
-          <label className='text-xl w-[10%]'>Title</label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required className='w-[20%] p-[0.5%] rounded-xl' />
+          <label className='text-xl md:w-[10%] w-[50%]'>Title</label>
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required className='md:w-[20%] w-[40%] p-[0.5%] rounded-xl' />
         </div>
         <div className='flex gap-3 w-full justify-center my-[1%] items-center'>
 
-          <label className='text-xl w-[10%]' >Description</label>
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} className='w-[20%] p-[0.5%] rounded-xl' />
+          <label className='text-xl md:w-[10%] w-[50%]' >Description</label>
+          <textarea value={description} onChange={(e) => setDescription(e.target.value)} className='md:w-[20%] w-[40%] p-[0.5%] rounded-xl' />
         </div>
         <div className='flex gap-3 w-full justify-center my-[1%] items-center'>
-          <label className='text-xl w-[10%]'>Status</label>
-          <select value={status} onChange={(e) => setStatus(e.target.value)} className='w-[20%] p-[0.5%] rounded-xl'>
+          <label className='text-xl md:w-[10%] w-[50%]'>Status</label>
+          <select value={status} onChange={(e) => setStatus(e.target.value)} className='md:w-[20%] w-[40%] p-[0.5%] rounded-xl'>
             <option value="pending">Pending</option>
             <option value="in-progress">In Progress</option>
             <option value="completed">Completed</option>
           </select>
         </div>
         <div className='flex gap-3 w-full justify-center my-[1%] items-center'>
-          <label className='text-xl w-[10%]'>Due Date</label>
-          <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className='w-[20%] p-[0.5%] rounded-xl'/>
+          <label className='text-xl md:w-[10%] w-[50%]'>Due Date</label>
+          <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className='md:w-[20%] w-[40%] p-[0.5%] rounded-xl'/>
         </div>
-        <div className='flex gap-3 w-full justify-center my-[1%] items-center'>
+        <div className='flex gap-3 w-full justify-center md:my-[1%] my-[2%] items-center'>
         <button type="submit"  className='bg-red-400 text-white px-[3%] py-[0.5%] rounded-xl'>{id ? 'Update Task' : 'Create Task'}</button>
         </div>
         
